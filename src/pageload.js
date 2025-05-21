@@ -32,10 +32,33 @@ function menuPageLoad(){
 
     const menuItems =  document.createElement('div');
     menuItems.innerHTML = `
-        <div>
-        
-        </div>
-        `
+        <div>pepperoni pizza -- $10</div>
+        <div>hawaian pizza -- $15</div>
+        <div>vegetarian pizza -- $20</div>
+        <div>sausage pizza -- $20</div>
+        <div>cheese pizza -- $10</div>
+        <div>specialty pizza -- $20</div>
+    `;
+    const content = document.getElementById('content');
+    content.appendChild(menuHeadLine);
+    content.appendChild(menuItems);    
 }
 
-export { pageload };
+//about page load function
+
+function aboutPageLoad(){
+    const aboutHeadLine = document.createElement('h2');
+    aboutHeadLine.innerHTML = 'Contact Us';
+    const aboutItems =  document.createElement('div');
+    aboutItems.innerHTML = `
+        <div>Address: 1234 pizza street, pizza city, TX</div>
+        <div>Phone: 123-456-7890</div>
+        <div>Email: email@email.com </div>
+        <div>Open mon-sun 10am-10pm</div>
+        <div>We are located in the heart of pizza city, come and visit us for the best pizza in town</div>
+    `
+    const content = document.getElementById('content');
+    content.appendChild(aboutHeadLine);
+    content.appendChild(aboutItems);
+}
+export { pageload, menuPageLoad, aboutPageLoad };
